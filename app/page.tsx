@@ -2,64 +2,66 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-slate-900 text-slate-100 font-sans">
+      <header className="bg-slate-800/75 backdrop-blur sticky top-0 z-30 border-b border-slate-700">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <h1 className="text-lg font-mono font-semibold">Portfolio</h1>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      </header>
+
+      <section className="max-w-5xl mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-start gap-10">
+        <div className="w-full md:w-1/2">
+          <h2 className="text-4xl font-extrabold font-mono mb-4">Hello, I'm Athiwat</h2>
+          <p className="text-slate-300 mb-6">CS student and programmer. I like building web apps, automation scripts.</p>
+
+          <ul className="text-sm space-y-1 text-slate-300 mt-6 font-mono">
+            <li><strong className="text-slate-200">My Name:</strong> Athiwat Tangrusicharoen</li>
+            <li><strong className="text-slate-200">Student ID:</strong> 673450041-1</li>
+            <li><strong className="text-slate-200">Major:</strong> Computer and Information Science</li>
+            <li><strong className="text-slate-200">University:</strong> KKU</li>
+          </ul>
+        </div>
+
+        <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-64 h-64 md:w-72 md:h-72 rounded-md overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.6)] ring-1 ring-slate-700">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/IMG_0591.png"
+              alt="Profile"
+              width={700}
+              height={700}
+              className="object-cover w-full h-full"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="skills" className="max-w-5xl mx-auto px-6 py-8">
+        <h3 className="text-2xl font-semibold mb-4 font-mono">Skills</h3>
+        <div className="flex flex-wrap gap-3">
+          <span className="bg-slate-800 text-green-300 px-3 py-1 rounded font-mono text-sm">Next.js</span>
+          <span className="bg-slate-800 text-green-300 px-3 py-1 rounded font-mono text-sm">SQL</span>
+          <span className="bg-slate-800 text-green-300 px-3 py-1 rounded font-mono text-sm">Tailwind CSS</span>
+          <span className="bg-slate-800 text-green-300 px-3 py-1 rounded font-mono text-sm">Node.js</span>
+          <span className="bg-slate-800 text-green-300 px-3 py-1 rounded font-mono text-sm">Git</span>
+        </div>
+      </section>
+
+      <section id="about" className="max-w-5xl mx-auto px-6 py-8">
+        <h3 className="text-2xl font-semibold mb-4 font-mono">About</h3>
+        <p className="text-slate-300">I focus on clean, maintainable code and enjoy learning new stacks. I contribute to small open-source projects and build personal tools to automate repetitive tasks.</p>
+      </section>
+
+      <section id="contact" className="max-w-5xl mx-auto px-6 py-8">
+        <h3 className="text-2xl font-semibold mb-4 font-mono">Contact</h3>
+        <p className="text-slate-300 mb-4">check my GitHub.</p>
+        <div className="flex gap-4">
+          <a href="https://github.com/Ati411" className="text-green-300 hover:underline">GitHub</a>
+        </div>
+      </section>
+
+      <footer className="border-t border-slate-800">
+        <div className="max-w-5xl mx-auto px-6 py-6 text-center text-sm text-slate-500">© {new Date().getFullYear()} Athiwat Tangrusicharoen</div>
+      </footer>
+    </main>
   );
 }
